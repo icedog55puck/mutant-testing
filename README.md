@@ -22,9 +22,51 @@ Mutation testing is a powerful technique to evaluate the quality and effectivene
    - Description: Adds 1 to each coefficient.
    - Impact: Examines the ability to identify and eliminate redundant changes.
 
-## Description of Applied Mutations and Their Impact
+### Description of Applied Mutations and Their Impact
 
-The defined mutation operators were systematically applied to create mutant versions of the Polynomial class. Each mutation introduced subtle changes to the original code, simulating potential errors or modifications.
+#### Change Coefficients Operator:
+
+1. **Mutation Description:**
+   - Randomly changed coefficients to simulate potential variations in polynomial coefficients.
+   - Example: Original coefficients [3, 0, 2] mutated to [4, -1, 3].
+
+2. **Impact:**
+   - Tested the test suite's sensitivity to changes in the coefficients of the Polynomial class.
+   - Revealed scenarios where the test suite may not effectively detect variations in coefficient values.
+
+#### Change Exponentiation Operator:
+
+1. **Mutation Description:**
+   - Squared each coefficient to mimic alterations in exponentiation.
+   - Example: Original coefficients [3, 0, 2] mutated to [9, 0, 4].
+
+2. **Impact:**
+   - Assessed the test suite's ability to identify changes in exponentiation within the Polynomial class.
+   - Uncovered situations where the test suite lacked sensitivity to exponentiation alterations.
+
+#### Remove Coefficients Operator:
+
+1. **Mutation Description:**
+   - Randomly set coefficients to zero to simulate missing terms in the polynomial.
+   - Example: Original coefficients [3, 0, 2] mutated to [3, 0, 0].
+
+2. **Impact:**
+   - Evaluated the test suite's effectiveness in detecting missing terms and zero coefficients.
+   - Highlighted areas where the test suite successfully identified changes.
+
+#### Add Redundant Code Operator:
+
+1. **Mutation Description:**
+   - Added 1 to each coefficient, introducing redundant changes.
+   - Example: Original coefficients [3, 0, 2] mutated to [4, 1, 3].
+
+2. **Impact:**
+   - Examined the test suite's ability to identify and eliminate redundant modifications.
+   - Demonstrated the robustness of the test suite in detecting unnecessary changes.
+
+### Overall Impact:
+
+The systematic application of these mutation operators allowed for a comprehensive assessment of the test suite's effectiveness in detecting variations and potential errors in the Polynomial class. Each mutation introduced subtle changes that mimicked real-world scenarios, revealing both the strengths and weaknesses of the test suite. The impact of these mutations extended beyond simple code modifications, providing valuable insights into the test suite's overall sensitivity and coverage. This analysis serves as a foundation for refining the test suite to ensure it remains resilient in the face of potential code changes in the Polynomial class.
 
 ### Summary of Mutant Survival and Killing
 
