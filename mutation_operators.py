@@ -14,6 +14,5 @@ def remove_coefficients(poly):
     for idx in indices_to_remove:
         poly.coefficients[idx] = 0
 def add_redundant_code(poly):
-    for i in range(len(poly.coefficients)):
-        # Introduce a redundant calculation
-        poly.coefficients[i] = poly.coefficients[i] * 1
+    # Introduce a redundant change, for example, add 1 to each coefficient
+    poly.coefficients = [coeff + 1 for coeff in poly.coefficients]

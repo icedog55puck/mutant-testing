@@ -1,8 +1,7 @@
-# apply_mutations.py
+from Polynomial import Polynomial
+from mutation_operators import change_coefficients, change_exponentiation, remove_coefficients, add_redundant_code
 
-from polynomial import Polynomial
-from mutation_operators import change_coefficients
-
+# Apply mutations to create mutants
 poly1_mutant = Polynomial([3, 0, 2])
 change_coefficients(poly1_mutant)
 
