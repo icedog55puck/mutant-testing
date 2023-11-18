@@ -62,14 +62,27 @@ These observations underscore the importance of addressing specific scenarios wi
 
 ### Mutant Analysis
 
-1. **Mutant Sensitivity:**
-   - Surviving mutants revealed potential blind spots in the test suite.
-   - Highlighted specific scenarios that need attention and additional test cases.
+#### Mutant Sensitivity:
 
-2. **Test Case Strengths and Weaknesses:**
-   - Certain test cases demonstrated robustness in detecting mutations.
-   - Identified areas where test cases could be strengthened for improved mutation detection.
+1. **Observation:** Surviving mutants revealed potential blind spots in the test suite.
+   - **Analysis:** The presence of surviving mutants indicates areas where the test suite may lack sensitivity or fail to detect specific types of mutations.
+   - **Recommendation:** Conduct a detailed examination of the surviving mutants to identify the specific scenarios that went undetected. Develop new test cases targeting these scenarios to enhance the sensitivity of the test suite.
 
+2. **Observation:** Highlighted specific scenarios that need attention and additional test cases.
+   - **Analysis:** The surviving mutants pinpoint specific scenarios or conditions where the test suite may not be adequately addressing the variations in the Polynomial class.
+   - **Recommendation:** Develop targeted test cases for the identified scenarios to close the gaps in test coverage. These additional test cases should aim to thoroughly explore the behavior of the Polynomial class under different conditions.
+
+#### Test Case Strengths and Weaknesses:
+
+1. **Observation:** Certain test cases demonstrated robustness in detecting mutations.
+   - **Analysis:** The effectiveness of certain test cases in detecting mutations indicates strengths in the current test suite.
+   - **Recommendation:** Document and analyze the characteristics of these strong test cases. Consider leveraging similar strategies in designing new test cases for other parts of the Polynomial class to ensure consistent and robust mutation detection.
+
+2. **Observation:** Identified areas where test cases could be strengthened for improved mutation detection.
+   - **Analysis:** Weaknesses in certain test cases suggest opportunities for improvement in the test suite's ability to detect mutations.
+   - **Recommendation:** Review and refactor the weak test cases, incorporating additional scenarios, edge cases, and boundary values. Aim to make the test suite more resilient and effective in identifying potential issues in the Polynomial class.
+
+In-depth analysis of mutant sensitivity and test case strengths and weaknesses provides valuable insights into specific areas that require attention and improvement. This information guides the refinement of the test suite, ensuring comprehensive coverage and robust mutation detection capabilities for the Polynomial class.
 ## Recommendations for Improving the Test Suite
 
 1. **Enhance Test Coverage:**
